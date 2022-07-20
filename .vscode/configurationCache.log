@@ -1,0 +1,1 @@
+{"buildTargets":["createdb","dropdb","postgrescreate","postgresstart","postgresstop","sqlc","test"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}
