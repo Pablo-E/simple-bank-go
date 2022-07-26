@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul 21 13:53:52 2022
+# Make data base, printed on Tue Jul 26 13:11:54 2022
 
 # Variables
 
@@ -93,13 +93,13 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 11436
+VSCODE_PID = 35178
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/matebookd15:@/tmp/.ICE-unix/2924,unix/matebookd15:/tmp/.ICE-unix/2924
+SESSION_MANAGER = local/matebookd15:@/tmp/.ICE-unix/2891,unix/matebookd15:/tmp/.ICE-unix/2891
 # automatic
 *F = $(notdir $*)
 # environment
@@ -143,7 +143,7 @@ LC_TIME = es_MX.UTF-8
 # environment
 GOROOT = /usr/local/go
 # environment
-INVOCATION_ID = e151d8bfc3844e868bd55b220e24d6d0
+INVOCATION_ID = 8903bdf31c844f5a96f0fb4b868adb6f
 # environment
 USERNAME = pabloe
 # environment
@@ -173,7 +173,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := postgrescreate
 # environment
-SYSTEMD_EXEC_PID = 2947
+SYSTEMD_EXEC_PID = 2910
 # environment
 DISPLAY = :1
 # environment
@@ -185,11 +185,11 @@ DEFAULTS_PATH = /usr/share/gconf/pop.default.path
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 2668
+MANAGERPID = 2637
 # environment
 LC_MEASUREMENT = es_MX.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 11436
+GIO_LAUNCHED_DESKTOP_FILE_PID = 35178
 # environment
 _ = /usr/share/code/code
 # environment
@@ -199,7 +199,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:43752
+JOURNAL_STREAM = 8:40801
 # environment
 GOMODCACHE = /home/pabloe/go/pkg/mod
 # environment
@@ -241,9 +241,9 @@ LC_IDENTIFICATION = es_MX.UTF-8
 
 # Directories
 
-# . (device 66307, inode 1180975): 9 files, no impossibilities.
+# . (device 66307, inode 1180975): 12 files, no impossibilities.
 
-# 9 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -261,7 +261,7 @@ postgresstop:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-12 13:01:19.956465923
+#  Last modified 2022-07-21 15:31:33.610758149
 #  File has been updated.
 #  Successfully updated.
 
@@ -285,6 +285,13 @@ postgrescreate:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 2):
 	sudo docker run --name postgres -p 5432:5432 -e POSTGRES_USER=root -e POSTGRES_PASSWORD=root -d postgres
+
+server:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 23):
+	go run main.go
 
 # Not a target:
 .DEFAULT:
@@ -321,19 +328,19 @@ createdb:
 	sudo docker exec -it postgres createdb --username=root --owner=root simple_bank
 
 # files hash-table stats:
-# Load=11/1024=1%, Rehash=0, Collisions=0/21=0%
+# Load=12/1024=1%, Rehash=0, Collisions=0/22=0%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 21 / storage = 177 B / avg = 8 B
-# current buf: size = 8162 B / used = 177 B / count = 21 / avg = 8 B
+# strcache buffers: 1 (0) / strings = 25 / storage = 204 B / avg = 8 B
+# current buf: size = 8162 B / used = 204 B / count = 25 / avg = 8 B
 
-# strcache performance: lookups = 32 / hit rate = 34%
+# strcache performance: lookups = 37 / hit rate = 32%
 # hash-table stats:
-# Load=21/8192=0%, Rehash=0, Collisions=0/32=0%
-# Finished Make data base on Thu Jul 21 13:53:52 2022
+# Load=25/8192=0%, Rehash=0, Collisions=0/37=0%
+# Finished Make data base on Tue Jul 26 13:11:54 2022
 
  
