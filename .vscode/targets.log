@@ -1,4 +1,6 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+make: *** No rule to make target 'all'.  Stop.
+
 # GNU Make 4.3
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2020 Free Software Foundation, Inc.
@@ -6,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 26 18:27:34 2022
+# Make data base, printed on Fri Jul 29 12:06:03 2022
 
 # Variables
 
@@ -91,13 +93,13 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 63704
+VSCODE_PID = 15451
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
 # environment
-SESSION_MANAGER = local/matebookd15:@/tmp/.ICE-unix/2891,unix/matebookd15:/tmp/.ICE-unix/2891
+SESSION_MANAGER = local/matebookd15:@/tmp/.ICE-unix/2880,unix/matebookd15:/tmp/.ICE-unix/2880
 # automatic
 *F = $(notdir $*)
 # environment
@@ -141,7 +143,7 @@ LC_TIME = es_MX.UTF-8
 # environment
 GOROOT = /usr/local/go
 # environment
-INVOCATION_ID = 8903bdf31c844f5a96f0fb4b868adb6f
+INVOCATION_ID = 30166b62a6b6445faef40559ba6f7e37
 # environment
 USERNAME = pabloe
 # environment
@@ -171,7 +173,7 @@ GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # makefile
 .DEFAULT_GOAL := postgrescreate
 # environment
-SYSTEMD_EXEC_PID = 2910
+SYSTEMD_EXEC_PID = 2900
 # environment
 DISPLAY = :1
 # environment
@@ -183,11 +185,11 @@ DEFAULTS_PATH = /usr/share/gconf/pop.default.path
 # default
 MAKE_VERSION := 4.3
 # environment
-MANAGERPID = 2637
+MANAGERPID = 2626
 # environment
 LC_MEASUREMENT = es_MX.UTF-8
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 63704
+GIO_LAUNCHED_DESKTOP_FILE_PID = 15451
 # environment
 _ = /usr/share/code/code
 # environment
@@ -197,7 +199,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
 # environment
-JOURNAL_STREAM = 8:40801
+JOURNAL_STREAM = 8:44787
 # environment
 GOMODCACHE = /home/pabloe/go/pkg/mod
 # environment
@@ -279,6 +281,7 @@ mock:
 
 dropdb:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 8):
@@ -294,9 +297,6 @@ postgrescreate:
 server:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
-make: *** No rule to make target 'all'.  Stop.
-
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 23):
 	go run main.go
@@ -349,6 +349,6 @@ createdb:
 # strcache performance: lookups = 39 / hit rate = 33%
 # hash-table stats:
 # Load=26/8192=0%, Rehash=0, Collisions=0/39=0%
-# Finished Make data base on Tue Jul 26 18:27:34 2022
+# Finished Make data base on Fri Jul 29 12:06:03 2022
 
  
