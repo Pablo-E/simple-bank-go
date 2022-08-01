@@ -11,10 +11,10 @@ import (
 )
 
 type createUserRequest struct {
-	Username       string `json:"username" binding:"required,alphanum"`
-	HashedPassword string `json:"password" binding:"required,min=6"`
-	FullName       string `json:"full_name" binding:"required"`
-	Email          string `json:"email" binding:"required,email"`
+	Username string `json:"username" binding:"required,alphanum"`
+	Password string `json:"password" binding:"required,min=6"`
+	FullName string `json:"full_name" binding:"required"`
+	Email    string `json:"email" binding:"required,email"`
 }
 
 type createUserResponse struct {
@@ -32,7 +32,7 @@ func (server *Server) createUser(ctx *gin.Context) {
 		return
 	}
 
-	hashedPassword, err := util.HashedPassword(req.HashedPassword)
+	hashedPassword, err := util.HashPassword(req.Password)
 	if err != nil {
 		ctx.JSON(http.StatusInternalServerError, errorResponse(err))
 		return
@@ -42,7 +42,7 @@ func (server *Server) createUser(ctx *gin.Context) {
 		Username:       req.Username,
 		HashedPassword: hashedPassword,
 		FullName:       req.FullName,
-		Email:          req.FullName,
+		Email:          req.Email,
 	}
 
 	user, err := server.store.CreateUser(ctx, arg)
